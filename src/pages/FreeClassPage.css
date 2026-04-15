@@ -1,0 +1,26 @@
+.free-page { padding: 40px 0 80px; }
+
+.free-page__hero {
+  text-align: center; padding: 60px 20px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-xl);
+  margin-bottom: 40px; position: relative; overflow: hidden;
+}
+.free-page__hero-orb {
+  position: absolute; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(16,185,129,0.15), transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%); filter: blur(60px); pointer-events: none;
+}
+.free-page__title {
+  font-size: 40px; font-weight: 900; color: var(--text-primary);
+  position: relative; z-index: 1; margin-bottom: 8px;
+}
+.free-page__desc {
+  font-size: 16px; color: var(--text-secondary); position: relative; z-index: 1;
+}
+.free-page__filters {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .free-page__title { font-size: 28px; }
+}

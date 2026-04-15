@@ -1,0 +1,168 @@
+.detail-page { padding: 40px 0 80px; }
+
+.detail-layout {
+  display: flex; gap: 32px; align-items: flex-start;
+}
+
+/* ── Main ── */
+.detail-main { flex: 1; min-width: 0; }
+
+.detail-thumb {
+  aspect-ratio: 16 / 9; border-radius: var(--radius-xl); position: relative;
+  overflow: hidden; margin-bottom: 32px;
+}
+.detail-thumb__overlay {
+  position: absolute; inset: 0; background: rgba(0,0,0,0.3);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.3s; cursor: pointer;
+}
+.detail-thumb:hover .detail-thumb__overlay { opacity: 1; }
+.detail-thumb__play {
+  padding: 14px 28px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px);
+  border-radius: var(--radius-full); font-size: 16px; font-weight: 600; color: #fff;
+}
+.detail-thumb__tags { position: absolute; top: 16px; left: 16px; display: flex; gap: 6px; }
+
+/* ── Info ── */
+.detail-info { margin-bottom: 40px; }
+.detail-info__category {
+  font-size: 14px; font-weight: 600; color: var(--primary-light); margin-bottom: 8px;
+}
+.detail-info__title {
+  font-size: 32px; font-weight: 800; color: var(--text-primary);
+  line-height: 1.35; letter-spacing: -0.5px; margin-bottom: 16px;
+}
+.detail-info__meta {
+  display: flex; gap: 16px; font-size: 14px; color: var(--text-secondary);
+}
+.detail-info__rating { color: var(--accent-gold); font-weight: 600; }
+
+/* ── Sections ── */
+.detail-section { margin-bottom: 48px; }
+.detail-section__title {
+  font-size: 22px; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.detail-section__content {
+  font-size: 15px; color: var(--text-secondary); line-height: 1.8;
+}
+.detail-section__content p { margin-bottom: 12px; }
+.detail-section__content strong { color: var(--text-primary); }
+.detail-section__content ul {
+  margin: 16px 0; padding-left: 20px; list-style: none;
+}
+.detail-section__content li {
+  padding: 6px 0; position: relative; padding-left: 20px;
+}
+.detail-section__content li::before {
+  content: '✅'; position: absolute; left: 0;
+}
+
+/* Curriculum */
+.detail-curriculum { display: flex; flex-direction: column; gap: 20px; }
+.detail-curriculum__section {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.detail-curriculum__heading {
+  padding: 16px 20px; font-size: 16px; font-weight: 700; color: var(--text-primary);
+  background: rgba(255,255,255,0.02);
+}
+.detail-curriculum__lessons { display: flex; flex-direction: column; }
+.detail-curriculum__lessons li {
+  padding: 12px 20px; font-size: 14px; color: var(--text-secondary);
+  border-top: 1px solid var(--border); display: flex; align-items: center; gap: 10px;
+}
+.detail-curriculum__icon { font-size: 14px; }
+
+/* Reviews */
+.detail-reviews { display: flex; flex-direction: column; gap: 12px; }
+.detail-review { padding: 20px; }
+.detail-review__header {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 12px;
+}
+.detail-review__avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--gradient-cool); display: flex; align-items: center;
+  justify-content: center; font-weight: 700; color: #fff; flex-shrink: 0;
+}
+.detail-review__header strong { font-size: 14px; color: var(--text-primary); display: block; }
+.detail-review__date { font-size: 12px; color: var(--text-muted); }
+.detail-review__stars { margin-left: auto; color: var(--accent-gold); font-size: 14px; letter-spacing: 2px; }
+.detail-review__text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+/* ── Sidebar ── */
+.detail-sidebar {
+  width: 360px; flex-shrink: 0; position: sticky;
+  top: calc(var(--header-height) + var(--sub-nav-height) + 24px);
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+.detail-price-card {
+  padding: 28px; display: flex; flex-direction: column; gap: 16px;
+}
+.detail-price-card__price { text-align: center; margin-bottom: 8px; }
+.detail-price-card__discount {
+  display: inline-block; padding: 4px 12px; background: rgba(239,68,68,0.15);
+  color: var(--accent-red); font-size: 14px; font-weight: 700;
+  border-radius: var(--radius-full); margin-bottom: 12px;
+}
+.detail-price-card__amount {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.detail-price-card__original {
+  font-size: 18px; color: var(--text-muted); text-decoration: line-through;
+}
+.detail-price-card__current {
+  font-size: 32px; font-weight: 900; color: var(--text-primary);
+}
+
+.detail-price-card__info {
+  margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.detail-price-card__info-item {
+  display: flex; justify-content: space-between; font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Tutor card */
+.detail-tutor-card {
+  padding: 28px; text-align: center; display: flex; flex-direction: column;
+  align-items: center; gap: 8px;
+}
+.detail-tutor-card__avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--gradient-neon); display: flex; align-items: center;
+  justify-content: center; font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 4px;
+}
+.detail-tutor-card__name { font-size: 18px; font-weight: 700; color: var(--text-primary); }
+.detail-tutor-card__title { font-size: 14px; color: var(--text-muted); }
+.detail-tutor-card__stats {
+  display: flex; gap: 32px; margin-top: 12px; padding-top: 16px;
+  border-top: 1px solid var(--border); width: 100%;
+}
+.detail-tutor-card__stats > div {
+  flex: 1; text-align: center;
+}
+.detail-tutor-card__stats strong {
+  display: block; font-size: 18px; color: var(--text-primary); margin-bottom: 2px;
+}
+.detail-tutor-card__stats span { font-size: 12px; color: var(--text-muted); }
+
+/* Related */
+.detail-related { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border); }
+
+/* ═══════════ Responsive ═══════════ */
+@media (max-width: 1024px) {
+  .detail-layout { flex-direction: column; }
+  .detail-sidebar { width: 100%; position: static; flex-direction: row; }
+  .detail-price-card, .detail-tutor-card { flex: 1; }
+}
+
+@media (max-width: 768px) {
+  .detail-info__title { font-size: 24px; }
+  .detail-sidebar { flex-direction: column; }
+  .detail-info__meta { flex-wrap: wrap; gap: 8px; }
+  .detail-price-card__current { font-size: 26px; }
+}

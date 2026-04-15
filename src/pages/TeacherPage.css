@@ -1,0 +1,142 @@
+.teacher-page { overflow: hidden; }
+
+/* Hero */
+.teacher-hero {
+  position: relative; min-height: 80vh; display: flex; align-items: center;
+  padding: 80px 0; overflow: hidden;
+}
+.teacher-hero__bg { position: absolute; inset: 0; pointer-events: none; }
+.teacher-hero__orb { position: absolute; border-radius: 50%; filter: blur(100px); }
+.teacher-hero__orb--1 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(124,58,237,0.2), transparent 70%);
+  top: -20%; left: -10%; animation: floatSlow 10s ease-in-out infinite;
+}
+.teacher-hero__orb--2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(6,182,212,0.15), transparent 70%);
+  bottom: -10%; right: -5%; animation: floatSlow 12s ease-in-out infinite reverse;
+}
+.teacher-hero__content { position: relative; z-index: 1; text-align: center; }
+.teacher-hero__badge {
+  display: inline-flex; padding: 8px 20px; background: var(--bg-glass);
+  border: 1px solid var(--border); border-radius: var(--radius-full);
+  font-size: 14px; color: var(--text-secondary); margin-bottom: 32px;
+}
+.teacher-hero__title {
+  font-size: 56px; font-weight: 900; line-height: 1.2; letter-spacing: -2px;
+  color: var(--text-primary); margin-bottom: 24px;
+}
+.teacher-hero__desc {
+  font-size: 18px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 40px;
+}
+
+/* Section title */
+.teacher-section-title {
+  font-size: 36px; font-weight: 800; text-align: center; letter-spacing: -1px;
+  color: var(--text-primary); margin-bottom: 48px;
+}
+
+/* Stats */
+.teacher-stats { padding: 64px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.teacher-stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.teacher-stats__item {
+  text-align: center; padding: 24px;
+}
+.teacher-stats__num {
+  display: block; font-size: 32px; font-weight: 900; color: var(--text-primary);
+  margin-bottom: 8px; letter-spacing: -0.5px;
+}
+.teacher-stats__label { font-size: 14px; color: var(--text-muted); }
+
+/* Benefits */
+.teacher-benefits { padding: 80px 0; }
+.teacher-benefits__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.teacher-benefit {
+  padding: 32px; text-align: center; transition: all 0.3s var(--ease-out);
+}
+.teacher-benefit:hover { transform: translateY(-4px); box-shadow: var(--shadow-neon); }
+.teacher-benefit__icon { font-size: 40px; display: block; margin-bottom: 16px; }
+.teacher-benefit__title { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+.teacher-benefit__desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+/* Steps */
+.teacher-steps { padding: 80px 0; background: rgba(255,255,255,0.01); }
+.teacher-steps__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+.teacher-step {
+  text-align: center; padding: 32px 20px; position: relative;
+}
+.teacher-step__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--gradient-primary); color: #fff;
+  font-size: 18px; font-weight: 800; margin-bottom: 16px;
+}
+.teacher-step__title { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+.teacher-step__desc { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+.teacher-step__arrow {
+  position: absolute; right: -16px; top: 50px;
+  font-size: 20px; color: var(--text-muted);
+}
+
+/* Reviews */
+.teacher-reviews { padding: 80px 0; }
+.teacher-reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.teacher-review {
+  padding: 32px; display: flex; flex-direction: column; gap: 20px;
+  transition: all 0.3s var(--ease-out);
+}
+.teacher-review:hover { transform: translateY(-4px); box-shadow: var(--shadow-neon); }
+.teacher-review__avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--gradient-neon); display: flex; align-items: center;
+  justify-content: center; font-size: 22px; font-weight: 800; color: #fff;
+}
+.teacher-review__text { font-size: 15px; color: var(--text-secondary); line-height: 1.7; flex: 1; font-style: italic; }
+.teacher-review__footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px; border-top: 1px solid var(--border);
+}
+.teacher-review__footer strong { display: block; font-size: 15px; color: var(--text-primary); }
+.teacher-review__footer span { font-size: 13px; color: var(--text-muted); }
+.teacher-review__revenue {
+  font-size: 14px !important; font-weight: 700; color: var(--accent-green) !important;
+}
+
+/* CTA */
+.teacher-cta { padding: 80px 0; }
+.teacher-cta__card {
+  position: relative; text-align: center; padding: 80px 40px;
+  background: var(--bg-card); border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl); overflow: hidden;
+}
+.teacher-cta__orb {
+  position: absolute; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(124,58,237,0.15), transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%); filter: blur(80px); pointer-events: none;
+}
+.teacher-cta__title {
+  font-size: 36px; font-weight: 800; color: var(--text-primary);
+  line-height: 1.3; margin-bottom: 16px; position: relative; z-index: 1;
+}
+.teacher-cta__desc {
+  font-size: 16px; color: var(--text-secondary); margin-bottom: 32px;
+  position: relative; z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .teacher-hero__title { font-size: 40px; }
+  .teacher-section-title { font-size: 28px; }
+  .teacher-stats__grid { grid-template-columns: repeat(2, 1fr); }
+  .teacher-benefits__grid { grid-template-columns: repeat(2, 1fr); }
+  .teacher-steps__grid { grid-template-columns: repeat(2, 1fr); }
+  .teacher-step__arrow { display: none; }
+  .teacher-reviews__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .teacher-hero__title { font-size: 32px; }
+  .teacher-stats__grid { grid-template-columns: repeat(2, 1fr); }
+  .teacher-benefits__grid { grid-template-columns: 1fr; }
+  .teacher-cta__title { font-size: 24px; }
+}
